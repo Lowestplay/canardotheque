@@ -9,13 +9,23 @@
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($canards as $canard): ?>
+        <?php foreach ($canard as $canard): ?>
+        <?php 
+        if ($canard['Type'] === 1) {
+            $canard['Type'] = 'Plastique';
+            }
+        elseif ($canard['Type'] === 2) {
+            $canard['Type'] = 'Peluche';
+            }
+        else {
+            $canard['Type'] = 'Bouée';
+            }
+            ?>
             <tr>
                 <td><?= htmlspecialchars($canard['Nom_C']) ?></td>
                 <td><?= htmlspecialchars($canard['Type']) ?></td>
                 <td><?= htmlspecialchars($canard['Etat']) ?></td>
-            </tr>
-            <td> test </td>
+            </tr>            
         <?php endforeach; ?>
     </tbody>
 </table>

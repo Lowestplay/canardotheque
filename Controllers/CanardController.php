@@ -1,6 +1,8 @@
 <?php
-require_once '../Config/db.php';
-require_once '../Models/Canard.php';
-$canards = getAllCanards($pdo);
-var_dump($canards);
-include '../Views/canardliste.php';
+require_once __DIR__ . '/../Models/Canard.php';
+function canardliste() {
+    global $pdo;
+    $canard = getAllCanards($pdo); 
+    require_once __DIR__ . '/../Views/canardliste.php';
+    exit();
+}

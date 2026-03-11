@@ -5,7 +5,6 @@ $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
 
 try {
     $pdo = new PDO($dsn, 'root', '', $options);
-    echo 'Connexion réussie à la base de données.';
 } catch (PDOException $e) {
     die('Erreur de connexion : ' . $e->getMessage());
 }
