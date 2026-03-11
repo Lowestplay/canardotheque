@@ -17,6 +17,11 @@ switch ($action) {
         require_once 'Controllers/EtudiantController.php';
         ajouterEtudiant();
         break;
+    case 'emprunt':
+        require_once 'Controllers/EmpruntController.php';
+        canardispoliste();
+        ajouterEmprunt();
+        break;
     
 
     case 'accueil':
@@ -36,6 +41,7 @@ switch ($action) {
                     <li><a href="index.php?action=ajoutercanard">Ajouter un Canard</a></li>
                     <li><a href="index.php?action=etudiantliste">Liste des Etudiants</a></li>
                     <li><a href="index.php?action=ajouteretudiant">Ajouter un Etudiant</a></li>
+                    <li><a href="index.php?action=emprunt">Emprunter un Canard</a></li>
                 </ul>
             </nav>
 
