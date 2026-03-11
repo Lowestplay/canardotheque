@@ -9,6 +9,12 @@
         </tr>
     </thead>
     <tbody>
+            <nav>
+        <a href="index.php?action=etudiantliste">Ajouter des etudiants</a> |
+        <a href="index.php?action=etudiantliste">Liste des etudiants</a> |
+        <a href="index.php?action=canardliste">Liste des canards</a> |
+        <a href="index.php">Accueil</a>
+    </nav>
         <?php foreach ($canard as $canard): ?>
         <?php 
         if ($canard['Type'] === 1) {
